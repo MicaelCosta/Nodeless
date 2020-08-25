@@ -1,0 +1,19 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "optimize.js",
+  "dependencies": {
+    "sharp": "^0.25.4",
+    "@spark/services-container": "github:badico-cloud-hub/services-container#develop"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "predeploy": "rmdir node_modules/sharp && npm install --platform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rmdir node_modules/sharp && npm install sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
